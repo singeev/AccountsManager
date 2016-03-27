@@ -17,8 +17,8 @@
 						<td>${account.value.getIban()}</td>
 						<td>${account.value.getBic()}</td>
 						<td>
-							<a type="button" class="btn btn-success" href="/update-account?id=${account.key}"><span class="glyphicon glyphicon-pencil"></span></a>
-							<a type="button" class="btn btn-danger" href="/delete-account?id=${account.key}"><span class="glyphicon glyphicon-trash"></span></a>
+							<a type="button" class="btn btn-success" href="${pageContext.request.contextPath}/update-account?id=${account.key}"><span class="glyphicon glyphicon-pencil"></span></a>
+							<a type="button" class="btn btn-danger" href="${pageContext.request.contextPath}/delete-account?id=${account.key}"><span class="glyphicon glyphicon-trash"></span></a>
 						</td>
 					</tr>
 				</c:forEach>
@@ -28,7 +28,7 @@
 		<%----- Add new account button -----%>
 
 		<div>
-			<a class="btn btn-success" href="/account">Add new</a>
+			<a class="btn btn-success" href="${pageContext.request.contextPath}/account">Add new</a>
 		</div>
 	</div>
 

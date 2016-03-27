@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
@@ -41,8 +42,8 @@ public class AccountRestController {
 
     //work OK
     @RequestMapping(value = "/delete-account", method = RequestMethod.GET)
-    public void deleteAccount(@RequestParam(value = "id") int id, HttpServletResponse response) throws IOException {
+    public void deleteAccount(@RequestParam(value = "id") int id, HttpServletResponse response, HttpServletRequest request) throws IOException {
         service.deleteAccount(id);
-        response.sendRedirect("/accounts");
+        response.sendRedirect(request.getContextPath() + "/accounts");
     }
 }

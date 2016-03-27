@@ -14,7 +14,7 @@
 				<form:input path="bic" type="text" class="form-control" placeholder="Enter Business Identifier Code..." required="required"/>
 			</fieldset>
 			<button type="submit" class="btn btn-success">Submit</button>
-			<a class="btn btn-warning" href="/accounts">Cancel</a>
+			<a class="btn btn-warning" href="${pageContext.request.contextPath}/accounts">Cancel</a>
 		</form:form>
 	</div>
 

@@ -22,9 +22,6 @@ INSTALL AND RUN
 
 To install this application you need to run "mvn clean install" command in a root folder.
 As a result, in a /target folder, you'll get a "mybank-0.1.war" file ready to deploy to server.
-After deploy, you need to go to /accounts page in your browser to get to the start page.
-Probably you'll need to rename *.war file to "ROOT.war" to avoid appearance of project name
-in an URI.
 
 Other option to run this application - is to import these source code files to IDE
 and run it with embedded (or working via plugin) Tomcat server.

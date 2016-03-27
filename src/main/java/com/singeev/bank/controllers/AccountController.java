@@ -25,6 +25,12 @@ public class AccountController {
 	@Qualifier("MAP")
 	private AccountDao service;
 
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String redirectFromRootPage(ModelMap model) {
+		model.addAttribute("accounts", service.getAllAccounts());
+		return "accounts-list";
+	}
+
 	@RequestMapping(value = "/accounts", method = RequestMethod.GET)
 	public String showAccountsPage(ModelMap model) {
 		model.addAttribute("accounts", service.getAllAccounts());
