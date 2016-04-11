@@ -31,6 +31,12 @@ public class AccountController {
 		return "accounts-list";
 	}
 
+	@RequestMapping(value = "/transfers", method = RequestMethod.GET)
+	public String showTransfersPage(ModelMap model) {
+		model.addAttribute("accounts", service.getAllAccounts());
+		return "transfers";
+	}
+
 	@RequestMapping(value = "/accounts", method = RequestMethod.GET)
 	public String showAccountsPage(ModelMap model) {
 		model.addAttribute("accounts", service.getAllAccounts());

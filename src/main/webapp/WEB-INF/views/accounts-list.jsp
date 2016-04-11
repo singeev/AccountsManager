@@ -4,7 +4,7 @@
 	<%----- Accounts table -----%>
 
 	<div class="container">
-		<h3>Your accounts are:</h3>
+		<h3>Accounts list:</h3>
 		<table class="table table-striped">
 			<thead>
 				<th>IBAN</th>
