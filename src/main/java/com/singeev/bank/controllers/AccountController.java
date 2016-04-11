@@ -19,10 +19,10 @@ public class AccountController {
 	List of qualifiers for different
 	AccountDao implementations (instead of DAOFactory):
 	"MAP" - AccountDaoMap
-	"HSQL" - AccountDaoHsql
+	"HSQL" - AccountDaoJdbc
 	 */
 	@Autowired
-	@Qualifier("MAP")
+	@Qualifier("JDBC")
 	private AccountDao service;
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)

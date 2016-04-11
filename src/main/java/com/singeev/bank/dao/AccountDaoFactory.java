@@ -9,7 +9,7 @@ public class AccountDaoFactory {
             case MAP:
                 return new AccountDaoMap();
             case HSQL:
-                return new AccountDaoHsql();
+                return new AccountDaoJdbc();
             default:
                 return new AccountDaoMap();
         }
